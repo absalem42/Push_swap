@@ -6,7 +6,7 @@
 /*   By: absalem < absalem@student.42abudhabi.ae    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 09:02:24 by absalem           #+#    #+#             */
-/*   Updated: 2023/12/21 15:48:28 by absalem          ###   ########.fr       */
+/*   Updated: 2023/12/21 16:14:18 by absalem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ char	**parsing_h(int ac, char **av)
 	if (!av)
 		error_h();
 	join = join_str(av);
-	printf("%s",join);
+	split = ft_split(join, ' ');
+	
 	return(split);
 }

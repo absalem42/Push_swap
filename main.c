@@ -6,7 +6,7 @@
 /*   By: absalem < absalem@student.42abudhabi.ae    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 11:14:54 by absalem           #+#    #+#             */
-/*   Updated: 2023/12/21 15:13:20 by absalem          ###   ########.fr       */
+/*   Updated: 2023/12/21 16:16:46 by absalem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,11 @@ int	main(int ac, char **av)
     stack_a = NULL;
     stack_b = NULL;
     
-    if (ac == 1)
-        exit(EXIT_SUCCESS);
+    if (1 == ac || (ac == 2 && !av[1][0]))
+	{
+		putstr_fd(ERROR, STDERR_FILENO);
+	    exit(EXIT_FAILURE);
+    }
     av = parsing_h(ac-1, av);
 	
 }
