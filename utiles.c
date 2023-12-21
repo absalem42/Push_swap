@@ -1,46 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parsing.c                                          :+:      :+:    :+:   */
+/*   utiles.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: absalem < absalem@student.42abudhabi.ae    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/26 09:02:24 by absalem           #+#    #+#             */
-/*   Updated: 2023/12/21 15:48:28 by absalem          ###   ########.fr       */
+/*   Created: 2023/12/19 15:57:18 by absalem           #+#    #+#             */
+/*   Updated: 2023/12/21 15:49:04 by absalem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-char	*join_str(char **str)
+void	putstr_fd(char *s, int fd)
 {
-	char	*join;
-	int i;
-	
-	join = NULL;
-	i = 1;
-	if (!str)
-		error_h();
-	while (str[i])
+	if (s == NULL || fd < 0)
+		return ;
+	if (*s != '\0')
 	{
-		join = ft_strjoin_j(join, str[i]);
-		join = ft_strjoin_j(join," ");
-		i++;
+		write(fd, s, 1);
+		putstr_fd(s + 1, fd);
 	}
-	return(join);
 }
-char	**parsing_h(int ac, char **av)
-{
-	(void)ac;
-	char **split;
-	char *join;
-	int i;
 
-	i = 1;
-	split = NULL;
-	if (!av)
-		error_h();
-	join = join_str(av);
-	printf("%s",join);
-	return(split);
+void	error_h()
+{
+	putstr_fd(ERROR, STDERR_FILENO);
+	exit(EXIT_FAILURE);
+}
+
+int	ft_strlen(const char *str)
+{
+	int	i;
+
+	i = 0;
+	if (!str)
+		return (0);
+	while (str[i] != '\0')
+		i++;
+	return (i);
 }

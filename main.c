@@ -1,46 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parsing.c                                          :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: absalem < absalem@student.42abudhabi.ae    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/26 09:02:24 by absalem           #+#    #+#             */
-/*   Updated: 2023/12/21 15:48:28 by absalem          ###   ########.fr       */
+/*   Created: 2023/12/19 11:14:54 by absalem           #+#    #+#             */
+/*   Updated: 2023/12/21 15:13:20 by absalem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-char	*join_str(char **str)
+int	main(int ac, char **av)
 {
-	char	*join;
-	int i;
+    t_stack *stack_a;
+    t_stack *stack_b;
+    
+    stack_a = NULL;
+    stack_b = NULL;
+    
+    if (ac == 1)
+        exit(EXIT_SUCCESS);
+    av = parsing_h(ac-1, av);
 	
-	join = NULL;
-	i = 1;
-	if (!str)
-		error_h();
-	while (str[i])
-	{
-		join = ft_strjoin_j(join, str[i]);
-		join = ft_strjoin_j(join," ");
-		i++;
-	}
-	return(join);
-}
-char	**parsing_h(int ac, char **av)
-{
-	(void)ac;
-	char **split;
-	char *join;
-	int i;
-
-	i = 1;
-	split = NULL;
-	if (!av)
-		error_h();
-	join = join_str(av);
-	printf("%s",join);
-	return(split);
 }
