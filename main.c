@@ -26,5 +26,6 @@ int	main(int ac, char **av)
 	    exit(EXIT_FAILURE);
     }
     av = parsing_h(ac-1, av);
+    check_input(char **av)
 	
 }
