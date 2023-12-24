@@ -45,5 +45,8 @@ char	**parsing_h(int ac, char **argv);
 char	*ft_strjoin_j(char *s1, char *s2);
 int	    ft_strlen(const char *str);
 void	putstr_fd(char *s, int fd);
+void	free_string(char **str);
+int is_valid_number(char *str);
+int check_input(char **av);
 
 #endif

@@ -34,9 +34,7 @@ char	**parsing_h(int ac, char **av)
 	(void)ac;
 	char **split;
 	char *join;
-	int i;
 
-	i = 1;
 	split = NULL;
 	if (!av)
 		error_h();
@@ -44,4 +42,36 @@ char	**parsing_h(int ac, char **av)
 	split = ft_split(join, ' ');
 	
 	return(split);
+}
+
+int check_input(char **av)
+{
+	int i;
+
+    i = 0;
+	if (av[0] == NULL)
+		error_h();
+	while  (av[i])
+	{
+        if (!is_valid_number(av[i]))
+		{
+			free_string(av);
+            error_h();
+		}
+		i++;
+    }
+	return (1);
+}
+
+int is_valid_number(char *str)
+{
+    if (*str == '-' || *str == '+')
+        str++;
+    while (*str)
+	{
+        if (*str < '0' || *str > '9')
+            return 0;
+        str++;
+    }
+    return (1);
 }

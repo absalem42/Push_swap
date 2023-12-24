@@ -29,6 +29,19 @@ void	error_h()
 	exit(EXIT_FAILURE);
 }
 
+void	free_string(char **str)
+{
+	int i;
+
+	i = 0;
+	while (str[i])
+	{
+		free(str[i]);
+		i++;
+	}
+	free(str);
+}
+
 int	ft_strlen(const char *str)
 {
 	int	i;

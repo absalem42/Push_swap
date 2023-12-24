@@ -14,18 +14,24 @@
 
 int	main(int ac, char **av)
 {
-    t_stack *stack_a;
-    t_stack *stack_b;
+    // t_stack *stack_a;
+    // t_stack *stack_b;
     
-    stack_a = NULL;
-    stack_b = NULL;
+    // stack_a = NULL;
+    // stack_b = NULL;
     
     if (1 == ac || (ac == 2 && !av[1][0]))
 	{
 		putstr_fd(ERROR, STDERR_FILENO);
 	    exit(EXIT_FAILURE);
     }
-    av = parsing_h(ac-1, av);
-    check_input(char **av)
+    av = parsing_h(ac - 1, av);
+    if (check_input(av)) 
+    {
+        printf("%s\n", av[0]);
+    }
+
+    return 0;
+    
 	
 }
