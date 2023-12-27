@@ -6,13 +6,11 @@
 /*   By: absalem < absalem@student.42abudhabi.ae    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 09:02:24 by absalem           #+#    #+#             */
-/*   Updated: 2023/12/27 14:56:36 by absalem          ###   ########.fr       */
+/*   Updated: 2023/12/27 16:02:20 by absalem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 char	*join_str(char **str)
 {
@@ -29,8 +27,26 @@ char	*join_str(char **str)
 		join = ft_strjoin_j(join," ");
 		i++;
 	}
-	
 	return(join);
+}
+
+int check_input(char **av)
+{
+	int i;
+
+    i = 0;
+	if (av[0] == NULL)
+		error_h();
+	while  (av[i])
+	{
+        if (is_valid_number(av[i]))
+		{
+			free_string(av);
+            error_h();
+		}
+		i++;
+    }
+	return (1);
 }
 
 char	**parsing_h(char **av)
@@ -53,99 +69,21 @@ char	**parsing_h(char **av)
 	return(split);
 }
 
-int check_input(char **av)
-{
-	int i;
 
-    i = 0;
-	if (av[0] == NULL)
-		error_h();
-	while  (av[i])
-	{
-        if (is_valid_number(av[i]))
-		{
-			free_string(av);
-            error_h();
-		}
-		i++;
-    }
-	return (1);
-}
-void	validate_arguments(int ac, char **av)
-{
-	int	i;
-
-	i = 0;
-	while (++i < ac)
-	{
-		if (!av[i][0] || (av[i][0] && av[i][0] == ' '))
-			error_h();
-	}
-}
-
-void	 ft_ini_stack(t_stack **a, char **str)
-{
-	int		i;
-	long	num;
-	int 	flag;
-
-	if (!str)
-		return ;
-	flag = 1;
-	i = 0;
-	while (str[i])
-	{
-		num = ft_atoi(str[i], &flag);
-		if (flag == 0)
-		{
-            error_h();
-            free_string(str);
-            return;
-		}
-		if (repeat_check(*a, (int)num))
-		{
-			return(free_string(str), ft_lstclear(a, free), error_h());		
-		}
-		fill_stack(a, (int)num);
-		i++;
-	}
-	free_string(str);
-}
-
-
-void	fill_stack(t_stack **a, int num)
-{
-	t_stack *temp;
-	t_stack *prev_node;
+// void	ft_sorting(t_stack **stackA, t_stack **stackB)
+// {
+// 	int	length;
 	
-	if (!a)
-		return;
-	prev_node = NULL;
-	temp = malloc(sizeof(t_stack));
-	if (!temp)
-		return;
-	temp->content = num;
-	temp->index = -1;
-	temp->next = NULL;
-	if (!*a)
-	{
-		*a = temp;
-		temp->prev = NULL;
-	}
-	else 
-	{
-		prev_node = find_last(*a);
-		prev_node->next = temp;
-		temp->prev = prev_node;
-	}
-}
-
-t_stack	*find_last(t_stack *head)
-{
-	if (!head)
-		return (NULL);
-	while (head->next) 
-		head = head->next;
-	return (head);
-}
+// 	length = ft_lstsize(*stackA);
+// 	if (length == 2)
+// 		sort2na(stackA);
+// 	if (length == 3)
+// 		sort3n(stackA);
+// 	if (length == 4)
+// 		sort4n(stackA, stackB);
+// 	if (length == 5)
+// 		sort5n(stackA, stackB);
+// 	if (length > 5)
+// 		sort100n(stackA, stackB);
+// }
 

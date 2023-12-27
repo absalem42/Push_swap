@@ -6,7 +6,7 @@
 /*   By: absalem < absalem@student.42abudhabi.ae    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/25 12:26:41 by absalem           #+#    #+#             */
-/*   Updated: 2023/12/27 14:55:34 by absalem          ###   ########.fr       */
+/*   Updated: 2023/12/27 16:01:06 by absalem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,20 @@ int  is_valid_number(char *str)
         str++;
     }
     return (0);
+}
+
+void	validate_arguments(int ac, char **av)
+{
+	int	i;
+
+	if (!ac || !av)
+		error_h();
+	i = 0;
+	while (++i < ac)
+	{
+		if (!av[i][0] || (av[i][0] && av[i][0] == ' '))
+			error_h();
+	}
 }
 void	error_h()
 {

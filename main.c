@@ -6,7 +6,7 @@
 /*   By: absalem < absalem@student.42abudhabi.ae    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 11:14:54 by absalem           #+#    #+#             */
-/*   Updated: 2023/12/27 15:39:08 by absalem          ###   ########.fr       */
+/*   Updated: 2023/12/27 15:51:40 by absalem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int	main(int ac, char **av)
     }
     print_stack(stack_a);
     // printf("%d",stack_a->content);
-    free_string(av);
+    // free_string(av);
     ft_lstclear(&stack_a, free);
     return 0;  
 }
