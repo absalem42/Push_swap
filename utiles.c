@@ -6,20 +6,20 @@
 /*   By: absalem < absalem@student.42abudhabi.ae    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 15:57:18 by absalem           #+#    #+#             */
-/*   Updated: 2023/12/27 14:55:13 by absalem          ###   ########.fr       */
+/*   Updated: 2023/12/27 18:18:09 by absalem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
 	if (s == NULL || fd < 0)
 		return ;
 	if (*s != '\0')
 	{
 		write(fd, s, 1);
-		putstr_fd(s + 1, fd);
+		ft_putstr_fd(s + 1, fd);
 	}
 }
 

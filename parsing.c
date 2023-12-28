@@ -6,7 +6,7 @@
 /*   By: absalem < absalem@student.42abudhabi.ae    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 09:02:24 by absalem           #+#    #+#             */
-/*   Updated: 2023/12/27 16:02:20 by absalem          ###   ########.fr       */
+/*   Updated: 2023/12/28 17:12:41 by absalem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,6 @@ char	**parsing_h(char **av)
 	char **split;
 	char *join;
 
-	split = NULL;
 	if (!av)
 		error_h();
 	join = join_str(av);
@@ -70,20 +69,21 @@ char	**parsing_h(char **av)
 }
 
 
-// void	ft_sorting(t_stack **stackA, t_stack **stackB)
-// {
-// 	int	length;
-	
-// 	length = ft_lstsize(*stackA);
-// 	if (length == 2)
-// 		sort2na(stackA);
-// 	if (length == 3)
-// 		sort3n(stackA);
-// 	if (length == 4)
-// 		sort4n(stackA, stackB);
-// 	if (length == 5)
-// 		sort5n(stackA, stackB);
-// 	if (length > 5)
-// 		sort100n(stackA, stackB);
-// }
+
+void	sorting(t_stack **stacka, t_stack **stackb)
+{
+	int	length;
+	(void)stackb;
+	length = ft_lstsize(*stacka);
+	if (length == 2)
+		townumsort(stacka);
+	if (length == 3)
+		threenumsort(stacka);
+	// if (length == 4)
+	// 	sort4n(stackA, stackB);
+	// if (length == 5)
+	// 	sort5n(stackA, stackB);
+	// if (length > 5)
+	// 	sort100n(stackA, stackB);
+}
 

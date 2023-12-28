@@ -6,13 +6,14 @@
 #    By: absalem < absalem@student.42abudhabi.ae    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/19 11:10:30 by absalem           #+#    #+#              #
-#    Updated: 2023/12/27 16:04:06 by absalem          ###   ########.fr        #
+#    Updated: 2023/12/28 15:50:08 by absalem          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME 			= push_swap
 
-SRC 			= main.c utiles.c split_utiles.c parsing.c stack_utiles.c utiles_2.c\
+SRC 			= main.c utiles.c split_utiles.c parsing.c stack_utiles.c \
+					utiles_2.c operate_a.c operate_b.c extra.c sorting.c\
 
 
 CC				= cc
