@@ -12,10 +12,10 @@
 
 #include "push_swap.h"
 
-void    townumsort(t_stack **stack)
+void	townumsort(t_stack **stack)
 {
 	if ((*stack)->content > (*stack)->next->content)
-	    sa(stack);
+		sa(stack);
 }
 // void	threenumsort(t_stack **stack)
 // {
@@ -39,17 +39,15 @@ void    townumsort(t_stack **stack)
 //         sa(stack);
 // }
 
-
-
-void threenumsort(t_stack **stack)
+void	threenumsort(t_stack **stack)
 {
-	int num1;
-	int num2;
-	int num3;
-	
+	int	num1;
+	int	num2;
+	int	num3;
+
 	num1 = (*stack)->content;
 	num2 = (*stack)->next->content;
-	num3 =(*stack)->next->next->content;
+	num3 = (*stack)->next->next->content;
 	if (num1 < num2 && num2 < num3 && num1 < num3)
 		return ;
 	else if (num1 > num2 && num2 < num3 && num1 < num3)
@@ -69,4 +67,3 @@ void threenumsort(t_stack **stack)
 	else if (num1 < num2 && num2 > num3 && num1 > num3)
 		rra(stack);
 }
-

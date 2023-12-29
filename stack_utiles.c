@@ -12,12 +12,11 @@
 
 #include "push_swap.h"
 
-
-void	 ft_ini_stack(t_stack **a, char **str)
+void	ft_ini_stack(t_stack **a, char **str)
 {
 	int		i;
 	long	num;
-	int 	flag;
+	int		flag;
 
 	if (!str)
 		return ;
@@ -28,31 +27,30 @@ void	 ft_ini_stack(t_stack **a, char **str)
 		num = ft_atoi(str[i], &flag);
 		if (flag == 0)
 		{
-            return(free_string(str), ft_lstclear(a, free), error_h());
+			return (free_string(str), ft_lstclear(a, free), error_h());
 		}
 		if (repeat_check(*a, (int)num))
 		{
-			return(free_string(str), ft_lstclear(a, free), error_h());		
+			return (free_string(str), ft_lstclear(a, free), error_h());
 		}
 		fill_stack(a, (int)num);
 		i++;
 	}
-
-    // swap(a);
+	// swap(a);
 	free_string(str);
 }
 
 void	fill_stack(t_stack **a, int num)
 {
-	t_stack *temp;
-	t_stack *prev_node;
-	
+	t_stack	*temp;
+	t_stack	*prev_node;
+
 	if (!a)
-		return;
+		return ;
 	prev_node = NULL;
 	temp = malloc(sizeof(t_stack));
 	if (!temp)
-		return;
+		return ;
 	temp->content = num;
 	temp->index = -1;
 	temp->next = NULL;
@@ -61,7 +59,7 @@ void	fill_stack(t_stack **a, int num)
 		*a = temp;
 		temp->prev = NULL;
 	}
-	else 
+	else
 	{
 		prev_node = find_last(*a);
 		prev_node->next = temp;
@@ -73,7 +71,7 @@ t_stack	*find_last(t_stack *head)
 {
 	if (!head)
 		return (NULL);
-	while (head->next) 
+	while (head->next)
 		head = head->next;
 	return (head);
 }
@@ -91,16 +89,16 @@ int	ft_lstsize(t_stack *lst)
 	return (i);
 }
 
-int    ft_sorted(t_stack **stack_a)
+int	ft_sorted(t_stack **stack_a)
 {
-    t_stack *a;
-    
-    a = *stack_a;
-    while (a->next) 
-    {
-        if (a->content > a->next->content)
-            return(0);
-        a = a->next;
-    }
-    return(1);
+	t_stack *a;
+
+	a = *stack_a;
+	while (a->next)
+	{
+		if (a->content > a->next->content)
+			return (0);
+		a = a->next;
+	}
+	return (1);
 }

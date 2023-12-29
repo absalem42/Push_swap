@@ -27,7 +27,7 @@ t_stack	*ft_lstlast(t_stack *lst)
 	return (lst);
 }
 
-void ft_stack_add_back(t_stack **lst, t_stack *newnode)
+void	ft_stack_add_back(t_stack **lst, t_stack *newnode)
 {
 	t_stack *current;
 

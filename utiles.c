@@ -30,7 +30,7 @@ int	ft_isdigit(int c)
 
 void	free_string(char **str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i])
@@ -53,12 +53,12 @@ int	ft_strlen(const char *str)
 	return (i);
 }
 
-long 	ft_atoi(char *str, int *flag)
+long	ft_atoi(char *str, int *flag)
 {
-	int				i;
-	long				k;
-	long	value;
-	
+	int i;
+	long k;
+	long value;
+
 	i = 0;
 	k = 1;
 	value = 0;
@@ -75,8 +75,8 @@ long 	ft_atoi(char *str, int *flag)
 	}
 	if ((value > INT_MAX && k == 1) || (value > INT_MIN && k == -1))
 	{
-    	*flag = 0;
-    	return 0;
+		*flag = 0;
+		return (0);
 	}
 	return (value * k);
 }

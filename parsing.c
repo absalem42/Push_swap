@@ -15,8 +15,8 @@
 char	*join_str(char **str)
 {
 	char	*join;
-	int i;
-	
+	int		i;
+
 	join = NULL;
 	i = 1;
 	if (!str)
@@ -24,35 +24,35 @@ char	*join_str(char **str)
 	while (str[i])
 	{
 		join = ft_strjoin_j(join, str[i]);
-		join = ft_strjoin_j(join," ");
+		join = ft_strjoin_j(join, " ");
 		i++;
 	}
-	return(join);
+	return (join);
 }
 
-int check_input(char **av)
+int	check_input(char **av)
 {
-	int i;
+	int	i;
 
-    i = 0;
+	i = 0;
 	if (av[0] == NULL)
 		error_h();
-	while  (av[i])
+	while (av[i])
 	{
-        if (is_valid_number(av[i]))
+		if (is_valid_number(av[i]))
 		{
 			free_string(av);
-            error_h();
+			error_h();
 		}
 		i++;
-    }
+	}
 	return (1);
 }
 
 char	**parsing_h(char **av)
 {
-	char **split;
-	char *join;
+	char	**split;
+	char	*join;
 
 	if (!av)
 		error_h();
@@ -65,14 +65,13 @@ char	**parsing_h(char **av)
 	}
 	free(join);
 	check_input(split);
-	return(split);
+	return (split);
 }
-
-
 
 void	sorting(t_stack **stacka, t_stack **stackb)
 {
 	int	length;
+
 	(void)stackb;
 	length = ft_lstsize(*stacka);
 	if (length == 2)
@@ -86,4 +85,3 @@ void	sorting(t_stack **stacka, t_stack **stackb)
 	// if (length > 5)
 	// 	sort100n(stackA, stackB);
 }
-
