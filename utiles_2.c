@@ -25,55 +25,57 @@ int	repeat_check(t_stack *a, int nbr)
 	return (0);
 }
 
-int  is_valid_number(char *str)
+int	is_valid_number(char *str)
 {
-    if (*str == '-' || *str == '+')
-        str++;
-    if (!(*str >= '0' && *str <= '9'))
-        return (1);
-    while (*str)
-    {
-        if (!(*str >= '0' && *str <= '9'))
-            return (1);
-        str++;
-    }
-    return (0);
-}
-
-void	validate_arguments(int ac, char **av) 
-{
-    if (!ac || !av)
-        error_h();
-
-    int i = 1;
-    while (i < ac) 
+	if (*str == '-' || *str == '+')
+		str++;
+	if (!(*str >= '0' && *str <= '9'))
+		return (1);
+	while (*str)
 	{
-        int j = 0;
-        while (av[i][j]) 
-		{
-            if (av[i][j] != ' ' && av[i][j] != '\t' && av[i][j] != '\n'
-                && av[i][j] != '\v' && av[i][j] != '\f' && av[i][j] != '\r') 
-			{
-                break;
-            }
-            ++j;
-        }
-        if (av[i][j] == '\0') 
-		{
-            error_h();
-		}
-        ++i;
-    }
+		if (!(*str >= '0' && *str <= '9'))
+			return (1);
+		str++;
+	}
+	return (0);
 }
-void	error_h()
+
+void	validate_arguments(int ac, char **av)
+{
+	int	i;
+	int	j;
+
+	if (!ac || !av)
+		error_h();
+	i = 1;
+	while (i < ac)
+	{
+		j = 0;
+		while (av[i][j])
+		{
+			if (av[i][j] != ' ' && av[i][j] != '\t' && av[i][j] != '\n'
+				&& av[i][j] != '\v' && av[i][j] != '\f' && av[i][j] != '\r')
+			{
+				break ;
+			}
+			++j;
+		}
+		if (av[i][j] == '\0')
+		{
+			error_h();
+		}
+		++i;
+	}
+}
+void	error_h(void)
 {
 	ft_putstr_fd(ERROR, STDERR_FILENO);
 	exit(EXIT_FAILURE);
 }
- 
+
 void	ft_lstclear(t_stack **lst, void (*del)(void *))
 {
-	t_stack	*s;
+	t_stack *s;
 
 	if (lst)
 	{

@@ -14,30 +14,31 @@
 
 void	ra(t_stack **stack)
 {
+	t_stack	*temp;
+
 	if (*stack == NULL || (*stack)->next == NULL)
-        return;
-	t_stack *temp;
+		return ;
 	temp = *stack;
 	(*stack) = (*stack)->next;
 	temp->next = NULL;
 	ft_stack_add_back(stack, temp);
 	ft_putstr_fd("ra\n", 1);
 }
-void rra(t_stack **stack)
+void	rra(t_stack **stack)
 {
-    if (*stack == NULL || (*stack)->next == NULL)
-        return;
-    t_stack *first;
-    t_stack *second_last;
-    t_stack *last;
-    
-    last = ft_lstlast(*stack);
-    second_last = *stack;
-    first = *stack;
-    while (second_last->next->next != NULL)  
-        second_last = second_last->next;
-    second_last->next = NULL;
-    last->next = first;
-    *stack = last;
-    ft_putstr_fd("rra\n", 1);  
+	t_stack	*first;
+	t_stack	*second_last;
+	t_stack	*last;
+
+	if (*stack == NULL || (*stack)->next == NULL)
+		return ;
+	last = ft_lstlast(*stack);
+	second_last = *stack;
+	first = *stack;
+	while (second_last->next->next != NULL)
+		second_last = second_last->next;
+	second_last->next = NULL;
+	last->next = first;
+	*stack = last;
+	ft_putstr_fd("rra\n", 1);
 }

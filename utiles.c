@@ -6,7 +6,7 @@
 /*   By: absalem < absalem@student.42abudhabi.ae    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 15:57:18 by absalem           #+#    #+#             */
-/*   Updated: 2023/12/27 18:18:09 by absalem          ###   ########.fr       */
+/*   Updated: 2023/12/30 16:02:00 by absalem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_isdigit(int c)
 
 void	free_string(char **str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i])
@@ -53,12 +53,12 @@ int	ft_strlen(const char *str)
 	return (i);
 }
 
-long 	ft_atoi(char *str, int *flag)
+long	ft_atoi(char *str, int *flag)
 {
-	int				i;
-	long				k;
-	long	value;
-	
+	int i;
+	long k;
+	long value;
+
 	i = 0;
 	k = 1;
 	value = 0;
@@ -73,10 +73,10 @@ long 	ft_atoi(char *str, int *flag)
 		value = (value * 10) + (str[i] - 48);
 		i++;
 	}
-	if ((value > INT_MAX && k == 1) || (value > INT_MIN && k == -1))
+	if ((value > INT_MAX && k == 1) || (value < INT_MIN && k == -1))
 	{
-    	*flag = 0;
-    	return 0;
+		*flag = 0;
+		return (0);
 	}
 	return (value * k);
 }
