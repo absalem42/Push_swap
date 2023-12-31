@@ -6,7 +6,7 @@
 /*   By: absalem < absalem@student.42abudhabi.ae    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 09:02:24 by absalem           #+#    #+#             */
-/*   Updated: 2023/12/30 14:58:03 by absalem          ###   ########.fr       */
+/*   Updated: 2023/12/31 17:00:15 by absalem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,6 @@ void	sorting(t_stack **stacka, t_stack **stackb)
 		fournumsort(stacka, stackb);
 	if (length == 5)
 		fivenumsort(stacka, stackb);
-	// if (length > 5)
-	// 	sort100n(stackA, stackB);
+	if (length > 5)
+		sortrdix(stacka, stackb);
 }

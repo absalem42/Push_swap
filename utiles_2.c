@@ -6,7 +6,7 @@
 /*   By: absalem < absalem@student.42abudhabi.ae    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/25 12:26:41 by absalem           #+#    #+#             */
-/*   Updated: 2023/12/28 15:25:34 by absalem          ###   ########.fr       */
+/*   Updated: 2023/12/31 12:56:42 by absalem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@ void	validate_arguments(int ac, char **av)
 		++i;
 	}
 }
+
 void	error_h(void)
 {
 	ft_putstr_fd(ERROR, STDERR_FILENO);
@@ -75,7 +76,7 @@ void	error_h(void)
 
 void	ft_lstclear(t_stack **lst, void (*del)(void *))
 {
-	t_stack *s;
+	t_stack	*s;
 
 	if (lst)
 	{

@@ -6,7 +6,7 @@
 /*   By: absalem < absalem@student.42abudhabi.ae    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 11:14:43 by absalem           #+#    #+#             */
-/*   Updated: 2023/12/30 12:31:59 by absalem          ###   ########.fr       */
+/*   Updated: 2023/12/31 16:21:26 by absalem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,4 +73,13 @@ void				fivenumsort(t_stack **stack_a, t_stack **stack_b);
 
 int					find_min(t_stack **stack);
 int					find_length_min(t_stack **stack);
+
+void    sortrdix(t_stack **stack_a, t_stack **stack_b);
+
+t_stack *find_min_node(t_stack **stack);
+void    indexing(t_stack **stack);
+
+
+void	sort100n(t_stack **stackA, t_stack **stackB);
+
 #endif

@@ -6,7 +6,7 @@
 /*   By: absalem < absalem@student.42abudhabi.ae    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/25 12:10:39 by absalem           #+#    #+#             */
-/*   Updated: 2023/12/30 16:23:56 by absalem          ###   ########.fr       */
+/*   Updated: 2023/12/31 13:24:37 by absalem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,15 +66,6 @@ void	fill_stack(t_stack **a, int num)
 	}
 }
 
-// t_stack	*find_last(t_stack *head)
-// {
-// 	if (!head)
-// 		return (NULL);
-// 	while (head->next)
-// 		head = head->next;
-// 	return (head);
-// }
-
 int	ft_lstsize(t_stack *lst)
 {
 	int	i;
@@ -90,7 +81,7 @@ int	ft_lstsize(t_stack *lst)
 
 int	ft_sorted(t_stack **stack_a)
 {
-	t_stack *a;
+	t_stack	*a;
 
 	a = *stack_a;
 	while (a->next)
