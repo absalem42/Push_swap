@@ -73,10 +73,6 @@ void	sorting(t_stack **stacka, t_stack **stackb)
 {
 	int	length;
 
-<<<<<<< HEAD
-=======
-	(void)stackb;
->>>>>>> b94cff0eeb9d5b22086a0faf63bee877e01e9dea
 	length = ft_lstsize(*stacka);
 	if (length == 2)
 		townumsort(stacka);

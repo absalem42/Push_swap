@@ -68,11 +68,8 @@ void				sorting(t_stack **stack_a, t_stack **stack_b);
 
 void				townumsort(t_stack **stack);
 void				threenumsort(t_stack **stack);
-<<<<<<< HEAD
 void				fournumsort(t_stack **stackA, t_stack **stackB);
 void				fivenumsort(t_stack **stack_a, t_stack **stack_b);
-=======
->>>>>>> b94cff0eeb9d5b22086a0faf63bee877e01e9dea
 
 int					find_min(t_stack **stack);
 int					find_length_min(t_stack **stack);
