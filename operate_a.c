@@ -50,7 +50,11 @@ void	pa(t_stack **from, t_stack **to)
 {
 	t_stack	*temp;
 
+<<<<<<< HEAD
 	if (*from == NULL)
+=======
+	if (*from == NULL || (*from)->next == NULL)
+>>>>>>> b94cff0eeb9d5b22086a0faf63bee877e01e9dea
 		return ;
 	temp = (*from);
 	(*from) = (*from)->next;
@@ -63,7 +67,11 @@ void	pb(t_stack **from, t_stack **to)
 {
 	t_stack	*temp;
 
+<<<<<<< HEAD
 	if (*from == NULL)
+=======
+	if (*from == NULL || (*from)->next == NULL)
+>>>>>>> b94cff0eeb9d5b22086a0faf63bee877e01e9dea
 		return ;
 	temp = (*from);
 	(*from) = (*from)->next;

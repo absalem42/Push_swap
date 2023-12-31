@@ -36,6 +36,10 @@ void	ft_ini_stack(t_stack **a, char **str)
 		fill_stack(a, (int)num);
 		i++;
 	}
+<<<<<<< HEAD
+=======
+	// swap(a);
+>>>>>>> b94cff0eeb9d5b22086a0faf63bee877e01e9dea
 	free_string(str);
 }
 
@@ -66,6 +70,7 @@ void	fill_stack(t_stack **a, int num)
 	}
 }
 
+<<<<<<< HEAD
 // t_stack	*find_last(t_stack *head)
 // {
 // 	if (!head)
@@ -74,6 +79,16 @@ void	fill_stack(t_stack **a, int num)
 // 		head = head->next;
 // 	return (head);
 // }
+=======
+t_stack	*find_last(t_stack *head)
+{
+	if (!head)
+		return (NULL);
+	while (head->next)
+		head = head->next;
+	return (head);
+}
+>>>>>>> b94cff0eeb9d5b22086a0faf63bee877e01e9dea
 
 int	ft_lstsize(t_stack *lst)
 {

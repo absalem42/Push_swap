@@ -17,6 +17,30 @@ void	townumsort(t_stack **stack)
 	if ((*stack)->content > (*stack)->next->content)
 		sa(stack);
 }
+<<<<<<< HEAD
+=======
+// void	threenumsort(t_stack **stack)
+// {
+// 	if((*stack)->content > (*stack)->next->content)
+// 		sa(stack);
+// 	if((*stack)->next->content > (*stack)->next->next->content)
+// 		sa(stack);
+// 	if((*stack)->content > (*stack)->next->content)
+// 		sa(stack);
+// }
+
+// void threenumsort(t_stack **stack)
+// {
+//     if ((*stack)->content > (*stack)->next->content)
+//         sa(stack);
+
+//     if ((*stack)->next->content > (*stack)->next->next->content)
+//         sa(&((*stack)->next));
+
+//     if ((*stack)->content > (*stack)->next->content)
+//         sa(stack);
+// }
+>>>>>>> b94cff0eeb9d5b22086a0faf63bee877e01e9dea
 
 void	threenumsort(t_stack **stack)
 {
@@ -46,6 +70,7 @@ void	threenumsort(t_stack **stack)
 	else if (num1 < num2 && num2 > num3 && num1 > num3)
 		rra(stack);
 }
+<<<<<<< HEAD
 
 void	fournumsort(t_stack **stackA, t_stack **stackB)
 {
@@ -87,3 +112,5 @@ void	fivenumsort(t_stack **stackA, t_stack **stackB)
 	pa(stackB, stackA);
 	pa(stackB, stackA);
 }
+=======
+>>>>>>> b94cff0eeb9d5b22086a0faf63bee877e01e9dea
