@@ -6,7 +6,7 @@
 /*   By: absalem < absalem@student.42abudhabi.ae    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:38:03 by absalem           #+#    #+#             */
-/*   Updated: 2023/12/28 14:26:06 by absalem          ###   ########.fr       */
+/*   Updated: 2024/01/02 11:34:40 by absalem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ void	ra(t_stack **stack)
 	ft_stack_add_back(stack, temp);
 	ft_putstr_fd("ra\n", 1);
 }
+
 void	rra(t_stack **stack)
 {
 	t_stack	*first;

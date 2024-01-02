@@ -6,11 +6,12 @@
 /*   By: absalem < absalem@student.42abudhabi.ae    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/25 12:26:41 by absalem           #+#    #+#             */
-/*   Updated: 2023/12/31 12:56:42 by absalem          ###   ########.fr       */
+/*   Updated: 2024/01/02 13:16:43 by absalem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include <unistd.h>
 
 int	repeat_check(t_stack *a, int nbr)
 {
@@ -70,7 +71,7 @@ void	validate_arguments(int ac, char **av)
 
 void	error_h(void)
 {
-	ft_putstr_fd(ERROR, STDERR_FILENO);
+	ft_putstr_fd(ERROR, 2);
 	exit(EXIT_FAILURE);
 }
 

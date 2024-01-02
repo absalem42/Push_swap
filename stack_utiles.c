@@ -6,7 +6,7 @@
 /*   By: absalem < absalem@student.42abudhabi.ae    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/25 12:10:39 by absalem           #+#    #+#             */
-/*   Updated: 2023/12/31 13:24:37 by absalem          ###   ########.fr       */
+/*   Updated: 2024/01/02 14:49:07 by absalem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	ft_ini_stack(t_stack **a, char **str)
 {
-	int		i;
-	long	num;
-	int		flag;
+	int			i;
+	long long	num;
+	int			flag;
 
 	if (!str)
 		return ;
@@ -42,11 +42,11 @@ void	ft_ini_stack(t_stack **a, char **str)
 void	fill_stack(t_stack **a, int num)
 {
 	t_stack	*temp;
-	t_stack	*prev_node;
+	t_stack	*last_node;
 
 	if (!a)
 		return ;
-	prev_node = NULL;
+	last_node = NULL;
 	temp = malloc(sizeof(t_stack));
 	if (!temp)
 		return ;
@@ -60,9 +60,9 @@ void	fill_stack(t_stack **a, int num)
 	}
 	else
 	{
-		prev_node = ft_lstlast(*a);
-		prev_node->next = temp;
-		temp->prev = prev_node;
+		last_node = ft_lstlast(*a);
+		last_node->next = temp;
+		temp->prev = last_node;
 	}
 }
 

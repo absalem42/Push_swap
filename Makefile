@@ -6,7 +6,7 @@
 #    By: absalem < absalem@student.42abudhabi.ae    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/19 11:10:30 by absalem           #+#    #+#              #
-#    Updated: 2023/12/31 16:28:33 by absalem          ###   ########.fr        #
+#    Updated: 2024/01/02 17:18:38 by absalem          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ SRC 			= main.c utiles.c split_utiles.c parsing.c stack_utiles.c \
 
 CC				= cc
 RM				= rm -f
-CFLAGS			= -Wall -Wextra -Werror -Ilibft #-g3 -fsanitize=address
+CFLAGS			= -Wall -Wextra -Werror 
 OBJ = $(SRC:.c=.o)
 
 all: $(NAME)

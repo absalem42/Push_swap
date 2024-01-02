@@ -6,12 +6,11 @@
 /*   By: absalem < absalem@student.42abudhabi.ae    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 09:02:24 by absalem           #+#    #+#             */
-/*   Updated: 2023/12/31 17:00:15 by absalem          ###   ########.fr       */
+/*   Updated: 2024/01/02 13:45:39 by absalem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdio.h>
 
 char	*join_str(char **str)
 {
@@ -31,7 +30,7 @@ char	*join_str(char **str)
 	return (join);
 }
 
-int	check_input(char **av)
+void	check_input(char **av)
 {
 	int	i;
 
@@ -47,7 +46,6 @@ int	check_input(char **av)
 		}
 		i++;
 	}
-	return (1);
 }
 
 char	**parsing_h(char **av)

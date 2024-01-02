@@ -6,7 +6,7 @@
 /*   By: absalem < absalem@student.42abudhabi.ae    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 11:11:15 by absalem           #+#    #+#             */
-/*   Updated: 2023/12/31 17:30:08 by absalem          ###   ########.fr       */
+/*   Updated: 2024/01/01 16:17:10 by absalem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,20 +76,3 @@ int	find_length_min(t_stack **stack)
 	}
 	return (i);
 }
-
-// int	find_length_index(t_stack **stackA, int index)
-// {
-// 	int		i;
-// 	t_stack	*node;
-
-// 	i = 0;
-// 	node = *stackA;
-// 	while (node != NULL)
-// 	{
-// 		if (node->index == index)
-// 			break ;
-// 		i++;
-// 		node = node->next;
-// 	}
-// 	return (i);
-// }

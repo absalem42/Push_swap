@@ -6,7 +6,7 @@
 /*   By: absalem < absalem@student.42abudhabi.ae    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 11:14:43 by absalem           #+#    #+#             */
-/*   Updated: 2023/12/31 16:21:26 by absalem          ###   ########.fr       */
+/*   Updated: 2024/01/02 14:32:24 by absalem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int					ft_strlen(const char *str);
 void				ft_putstr_fd(char *s, int fd);
 void				free_string(char **str);
 int					is_valid_number(char *str);
-int					check_input(char **av);
+void				check_input(char **av);
 void				ft_stack_add_back(t_stack **lst, t_stack *newnode);
 long				ft_atoi(char *str, int *flag);
 void				ft_ini_stack(t_stack **a, char **str);
@@ -74,12 +74,15 @@ void				fivenumsort(t_stack **stack_a, t_stack **stack_b);
 int					find_min(t_stack **stack);
 int					find_length_min(t_stack **stack);
 
-void    sortrdix(t_stack **stack_a, t_stack **stack_b);
+void				sortrdix(t_stack **stack_a, t_stack **stack_b);
 
-t_stack *find_min_node(t_stack **stack);
-void    indexing(t_stack **stack);
+t_stack				*find_min_node(t_stack **stack);
+void				indexing(t_stack **stack);
 
+int					find_max_bits(t_stack *stack);
+t_stack				*find_max(t_stack *stackA);
+t_stack				*find_min_node(t_stack **stack);
 
-void	sort100n(t_stack **stackA, t_stack **stackB);
+void				print_stack(t_stack *stake_a);
 
 #endif
