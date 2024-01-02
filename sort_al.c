@@ -78,7 +78,7 @@ int	find_max_bits(t_stack *stack)
 	while (stack)
 	{
 		num_bits = 0;
-		num = stack->content;
+		num = stack->index;
 		if (num < 0)
 			num *= -1;
 		while (num > 0)
@@ -101,8 +101,8 @@ void	sortrdix(t_stack **stack_a, t_stack **stack_b)
 	int	j;
 
 	size = ft_lstsize(*stack_a);
-	max_bits = find_max_bits(*stack_a);
 	indexing(stack_a);
+	max_bits = find_max_bits(*stack_a);
 	i = 0;
 	while (i < max_bits)
 	{
