@@ -6,7 +6,7 @@
 /*   By: absalem < absalem@student.42abudhabi.ae    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/31 14:27:12 by absalem           #+#    #+#             */
-/*   Updated: 2024/01/02 17:17:30 by absalem          ###   ########.fr       */
+/*   Updated: 2024/01/03 13:56:03 by absalem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,25 +49,6 @@ void	indexing(t_stack **stack)
 	}
 }
 
-t_stack	*find_max(t_stack *stackA)
-{
-	int		max;
-	t_stack	*node;
-
-	node = stackA;
-	max = -2147483648;
-	while (stackA != NULL)
-	{
-		if (max < stackA->content)
-		{
-			max = stackA->content;
-			node = stackA;
-		}
-		stackA = stackA->next;
-	}
-	return (node);
-}
-
 int	find_max_bits(t_stack *stack)
 {
 	int	max_bits;
@@ -107,7 +88,7 @@ void	sortrdix(t_stack **stack_a, t_stack **stack_b)
 	while (i < max_bits)
 	{
 		j = 0;
-		while (j < size)
+		while (j < size && !ft_sorted(stack_a))
 		{
 			if (*stack_a && (((*stack_a)->index >> i) & 1) == 0)
 				pb(stack_a, stack_b);

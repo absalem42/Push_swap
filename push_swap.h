@@ -6,7 +6,7 @@
 /*   By: absalem < absalem@student.42abudhabi.ae    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 11:14:43 by absalem           #+#    #+#             */
-/*   Updated: 2024/01/02 14:32:24 by absalem          ###   ########.fr       */
+/*   Updated: 2024/01/02 17:20:13 by absalem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,5 @@ void				indexing(t_stack **stack);
 int					find_max_bits(t_stack *stack);
 t_stack				*find_max(t_stack *stackA);
 t_stack				*find_min_node(t_stack **stack);
-
-void				print_stack(t_stack *stake_a);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: absalem < absalem@student.42abudhabi.ae    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 11:14:54 by absalem           #+#    #+#             */
-/*   Updated: 2024/01/02 16:57:23 by absalem          ###   ########.fr       */
+/*   Updated: 2024/01/02 17:36:18 by absalem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	main(int ac, char **av)
 	if (ft_sorted(&stack_a))
 	{
 		ft_lstclear(&stack_a, free);
-		exit(1);
+		exit(0);
 	}
 	sorting(&stack_a, &stack_b);
 	ft_lstclear(&stack_a, free);
